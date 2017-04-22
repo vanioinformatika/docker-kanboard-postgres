@@ -1,0 +1,36 @@
+version: '3'
+services:
+  kanboard:
+    container_name: kanboard
+    restart: always
+    image: kanboard/kanboard:${kanban_version}
+    ports:
+     - "80:80"
+    networks:
+      - kanboard_net
+    depends_on:
+      - db
+    volumes:
+     - $PWD/data:/var/www/app/data
+     - $PWD/plugins:/var/www/app/plugins
+  db:
+    container_name: kanboard-db
+    restart: always
+    image: postgres:${postgres_version}
+    expose:
+      - "5432"
+    ports:
+      - "5432:5432"
+    networks:
+      - kanboard_net
+    environment:
+      POSTGRES_USER: kanboard
+      POSTGRES_PASSWORD: ${postgres_password}
+      PGDATA: /var/lib/postgresql/data
+    volumes:
+      - $PWD/db:/var/lib/postgresql/data
+      - $PWD/postgres.sql:/docker-entrypoint-initdb.d/initdb.sql
+
+networks:
+  kanboard_net:
+    driver: bridge
