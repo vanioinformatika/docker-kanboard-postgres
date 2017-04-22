@@ -6,11 +6,19 @@ Docker Compose with Kanboard and Postgres.
 
 This repository contains a docker-compose.yml to run Kanboard with PostgreSQL and data has been encapulating into a directory for simple backup.
 
-**Prerequist:** installed docker and docker-compose, and (fork and) clone this repo.
+## Prerequist
 
-    Start: docker-compose up -d
+* installed docker and docker-compose
 
-    Stop: docker-compose down
+* (fork and) clone this repo
+
+* ```chmod 777 data/ plugins/```
+
+## Start and Stop
+
+    docker-compose up -d
+
+    docker-compose down
 
 ## Directories:
 
