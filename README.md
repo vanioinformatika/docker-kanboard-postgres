@@ -6,7 +6,7 @@ Docker Compose with Kanboard and Postgres.
 
 This repository contains a docker-compose.yml to run Kanboard with PostgreSQL and data has been encapulating into a directory for simple backup.
 
-## Prerequist
+## Prerequisite
 
 * installed docker and docker-compose
 
@@ -33,6 +33,8 @@ This repository contains a docker-compose.yml to run Kanboard with PostgreSQL an
 * *.env*: contains version numbers, and *database password: do not afraid to change it!*
 
 * *data/config.php:*: standard [Kanboard configuration file](https://kanboard.net/documentation/config) prepared to using instantly; *DB_PASSWORD is the database password: do not afraid to change it!*
+
+Database preparation: *postgres.sql* file is Kanboard [app/Schema/Sql/postgres.sql](https://kanboard.net/documentation/postgresql-configuration)
 
 ## Backup:
 

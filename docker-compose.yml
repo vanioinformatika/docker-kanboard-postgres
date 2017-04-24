@@ -3,7 +3,7 @@ services:
   kanboard:
     container_name: kanboard
     restart: always
-    image: kanboard/kanboard:${kanban_version}
+    image: kanboard/kanboard:${kanboard_version}
     ports:
      - "80:80"
     networks:
