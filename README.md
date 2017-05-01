@@ -32,9 +32,13 @@ This repository contains a docker-compose.yml to run Kanboard with PostgreSQL an
 
 * *.env*: contains version numbers, and *database password: do not afraid to change it!*
 
-* *data/config.php:*: standard [Kanboard configuration file](https://kanboard.net/documentation/config) prepared to using instantly; *DB_PASSWORD is the database password: do not afraid to change it!*
+* *set an exact version number for kanboard:* replace kanboard_version=latest
 
-Database preparation: *postgres.sql* file is Kanboard [app/Schema/Sql/postgres.sql](https://kanboard.net/documentation/postgresql-configuration)
+Check config.php and postgres.sql files: it must comes from Kanboard v{kanboard_version}
+
+* *data/config.php:*: standard [Kanboard configuration file](https://kanboard.net/documentation/config) prepared to using instantly; *DB_PASSWORD is the database password: do not afraid to change it!* https://github.com/kanboard/kanboard/blob/master/config.default.php
+
+* *Database preparation:* *postgres.sql* file is Kanboard [app/Schema/Sql/postgres.sql](https://kanboard.net/documentation/postgresql-configuration) and https://github.com/kanboard/kanboard/tree/master/app/Schema/Sql
 
 ## Backup:
 
