@@ -45,3 +45,7 @@ Check data/config.php and postgres.sql files: it must comes from Kanboard v{kanb
 * Save *data* and *plugins* directory.
 
 * PostgreSQL dump for database (*db* directory)
+
+## Log
+
+    docker logs --follow kanboard
